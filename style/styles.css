@@ -1,0 +1,105 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #000;
+}
+
+main {
+    position: relative;
+}
+
+/* Progress Bar */
+main .progress {
+    position: fixed;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    z-index: 1000;
+}
+
+main .progress .progressBar {
+    position: fixed;
+    width: 0%;
+    /*나중에 JS로 늘려주는 식으로.. */
+    height: 3px;
+    background-color: #ffa600;
+    z-index: 1001;
+    transition: all 0.5s ease-out;
+}
+
+/* main page */
+section {
+    position: relative;
+    width: 100%;
+}
+
+section.mainPage {
+    background: linear-gradient(#4b0220, #691c46);
+    padding-bottom: 50px;
+}
+
+section.mainPage .imageWrap {
+    height: 1100px;
+    overflow-y: hidden;
+}
+
+section.mainPage .parallax {
+    position: fixed;
+    width: 100%;
+    height: inherit;
+    /* background position, size 잘 모르겠어 */
+    background-position: top center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease-out;
+}
+
+section.mainPage .parallax:nth-child(1) {
+    background-image: url("../image/main_0.png");
+}
+section.mainPage .parallax:nth-child(2) {
+    background-image: url("../image/main_1.png");
+}
+section.mainPage .parallax:nth-child(3) {
+    background-image: url("../image/main_2.png");
+}
+section.mainPage .parallax:nth-child(4) {
+    background-image: url("../image/main_3.png");
+}
+section.mainPage .parallax:nth-child(5) {
+    background-image: url("../image/main_4.png");
+}
+section.mainPage .parallax:nth-child(6) {
+    background-image: url("../image/main_5.png");
+    background-size: cover;
+}
+
+/* sub page */
+section.subPage {
+    background: linear-gradient(#000, #691c46);
+}
+
+section.subPage #parallax_6 {
+    position: relative;
+    top: -400px;
+    background-image: url("../image/main_6.png");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: auto 1100px;
+    height: 400px;
+    width: 100%;
+    transition: all 0.02s ease-out;
+}
+
+/* inner wrap 길이를 길게 해준다 */
+section.subPage .innerWrap {
+    position: relative;
+    margin: 0 auto;
+    padding: 500px 0;
+    width: 100%;
+    height: 4500px;
+}
